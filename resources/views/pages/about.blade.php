@@ -1,6 +1,8 @@
 <!doctype html>
 <html lang="{{ app()->getLocale() }}">
     <head>
+
+        @include('pages.base')
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -13,7 +15,7 @@
         <!-- Styles -->
         <style>
             html, body {
-                background-color: #fff;
+                background-color: #e1eaea;
                 color: #636b6f;
                 font-family: 'Raleway', sans-serif;
                 font-weight: 100;
