@@ -7,14 +7,17 @@ use Illuminate\Http\Request;
 class PagesController extends Controller
 {
     public function index(){
-        return view('pages.home');
+        $page = 'Home';
+        return view('pages.home')->with('page', $page);
     }
 
     public function about(){
-        return view('pages.about');
+        $page = 'About';
+        return view('pages.about')->with('page', $page);
     }
 
     public function archive(){
-        return view('pages.archive');
+        $page = 'Archive';
+        return view('pages.archive')->with('page', $page);
     }
 }
