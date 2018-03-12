@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Post;
 
 class PostsController extends Controller
 {
@@ -13,7 +14,9 @@ class PostsController extends Controller
      */
     public function index()
     {
-        //
+        $page = 'Archive';
+        $posts = Post::orderBy('title', 'desc')->paginate(10);
+        return view('pages.archive')->with('page', $page)->with('posts', $posts);
     }
 
     /**

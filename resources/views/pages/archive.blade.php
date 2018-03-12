@@ -1,9 +1,6 @@
 @extends('layouts.base')
 
 @section('content')
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <div class="flex-center position-ref full-height">
             @if (Route::has('login'))
@@ -21,13 +18,19 @@
                 <div class="title m-b-md">
                     {{$page}}
                 </div>
-
-                <div class="links">
-                    <a href="https://laravel.com/docs">Documentation</a>
-                    <a href="https://laracasts.com">Laracasts</a>
-                    <a href="https://laravel-news.com">News</a>
-                    <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
+                <div>
+                        @if(count($posts) > 0)
+                        @foreach($posts as $post)
+                            <div class="well">
+                                <h3>{{$post->title}}</h3>
+                                <p>{{$post->body}}</p>
+                                <small>Created on: {{$post->created_at}}</small>
+                            </div>
+                        @endforeach
+                        {{$posts->links()}}
+                        @else
+                        <p>No Posts Found</p>
+                    @endif
                 </div>
             </div>
         </div>
