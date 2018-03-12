@@ -24,7 +24,7 @@
 
             .flex-center {
                 align-items: center;
-                display: flex;
+                display: inline; 
                 justify-content: center;
             }
 
@@ -55,6 +55,17 @@
                 margin-bottom: 20px;
                 background: #F0F0F0;
                 padding: 10px;
+                margin-left: 300px;
+                margin-right:300px;
+            }
+
+            .form-group{
+                margin-left: 300px;
+                margin-right:300px;
+            }
+
+            .btn{
+                margin-bottom: 10px;
             }
         </style>
   <head>
@@ -69,7 +80,13 @@
     </head>
     <body>
       @include('inc.navbar')
+      @include('inc.messages')
         @yield('content')
+
+        <script src="/vendor/unisharp/laravel-ckeditor/ckeditor.js"></script>
+        <script>
+            CKEDITOR.replace( 'article-ckeditor' );
+        </script>
         <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
        <!--  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script> -->
         <!-- Include all compiled plugins (below), or include individual files as needed -->
