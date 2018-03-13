@@ -16,21 +16,21 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    {{$page}}
+                <h1>{{$post->title}}</h1>
                 </div>
+                <a href="/posts" class="btn btn-primary">View All Posts</a>
                 <div>
-                        @if(count($posts) > 0)
-                        @foreach($posts as $post)
-                            <div class="well">
-                                <h3><a href="/posts/{{$post->id}}">{{$post->title}}<a></h3>
-                                <p>{!!$post->body!!}</p>
-                                <small>Created on: {{$post->created_at}}</small>
-                            </div>
-                        @endforeach
-                        @else
-                        <p>No Posts Found</p>
-                    @endif
+                     {!!$post->body!!}
                 </div>
+                <hr>
+                <small>Written on: {{$post->created_at}}</small>
+                <hr>
+                <a href="/posts/{{$post->id}}/edit" class="btn btn-info">Edit</a>
+
+                {!!Form::open(['action' => ['PostsController@destroy', $post->id], 'method' => 'POST',])!!}
+                    {{Form::hidden('_method', 'DELETE')}}
+                    {{Form::submit('Delete', ['class' => 'btn btn-danger'])}}
+                {!!Form::close()!!}
             </div>
         </div>
 @endsection

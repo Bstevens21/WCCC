@@ -7,10 +7,10 @@
         <!-- Styles -->
         <style>
             html, body {
-                background-image: url("https://dl.dropboxusercontent.com/s/08an1vduqv60gof/IMG_8465.jpg?dl=0");
-                background-repeat: no-repeat;
-                background-size: cover;
-                background-color: #e1eaea;
+                /* background-image: url("https://dl.dropboxusercontent.com/s/08an1vduqv60gof/IMG_8465.jpg?dl=0");
+                background-repeat: no-repeat; */
+                /* background-size: cover; */
+                /* background-color: #e1eaea; */
                 color: #ffffff;
                 font-family: 'Raleway', sans-serif;
                 font-weight: 100;
@@ -53,7 +53,7 @@
 
             .well{
                 margin-bottom: 20px;
-                background: #F0F0F0;
+                background: #E0E0E0;
                 padding: 10px;
                 margin-left: 300px;
                 margin-right:300px;
