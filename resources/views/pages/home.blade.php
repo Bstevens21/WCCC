@@ -97,7 +97,7 @@
               <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
             </div>
             <div class="col-md-5">
-              <img class="featurette-image img-fluid mx-auto" src="https://photos-5.dropbox.com/t/2/AADZqDdqT4pPP2UvFpg1mwXH-HKjGFjcEMDhRqeC_WRUjQ/12/117288735/jpeg/32x32/3/1521111600/0/2/IMG_4350.JPG/EMbWvloY7hQgBygH/SLLknIbS1yl0ww7Udfj3p2ux-flmHZLmHHD5WoC1y3M%2CQnPYPkYn5ZJesyy0gqlAvgh8UbhrI-imy2T1K517SZ8%2CMdCE6yeUDg2vzHCM0ALxl6rQacFN8dwDe6sgDRurBdA?dl=0&size=2048x1536&size_mode=3" alt="Generic placeholder image">
+              <img class="featurette-image img-fluid mx-auto" src="https://photos-5.dropbox.com/t/2/AADtqtC2-3ybEVPIS5SZ4hrss4JpGM98O1PbHCFMrVQ3Hg/12/192203035/jpeg/32x32/1/_/1/2/Redstone%20NewYears2018%20(LoRes)-9357.jpg/EODLwc4JGNMBIAcoBw/JFwoCB9O_JZcwY3URB5EweYwmp5n35nNLf3y3mm02uM?size=1280x960&size_mode=3" alt="Generic placeholder image">
             </div>
           </div>
   
