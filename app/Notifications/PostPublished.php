@@ -33,6 +33,6 @@ class PostPublished extends Notification
      */
     public function toFacebookPoster($post)
     {
-        return with(new FacebookPosterPost($post->title));
+        return with(new FacebookPosterPost($post->title . '\n' . $post->body));
     }
 }
