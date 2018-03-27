@@ -2,60 +2,49 @@
 
 @section('content')
 
-  
-        <div id="myCarousel" class="carousel slide" data-ride="carousel">
-          <ol class="carousel-indicators">
-            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-            <li data-target="#myCarousel" data-slide-to="1"></li>
-            <li data-target="#myCarousel" data-slide-to="2"></li>
-          </ol>
-          <div class="carousel-inner">
-            <div class="carousel-item active">
-              <img class="first-slide" src="https://jjraiaphoto.files.wordpress.com/2014/11/monument-canyon-colorado-national-monument-co.jpg" alt="First slide">
-              <div class="container">
-                <div class="carousel-caption text-left">
-                  @if(count($posts) > 0)
-                  @foreach($posts as $post)
-                    <h1>{{$post->title}}</h1>
-                    <p>{!!$post->body!!}</p>
-                   @endforeach  
-                   @else
-                        <p>No Posts Found</p>
-                    @endif
-                    <a class="btn btn-lg btn-primary" href="/posts/{{$post->id}}" role="button">Find Out More</a></p>
-                </div>
-              </div>
-            </div>
-            <div class="carousel-item">
-              <img class="second-slide" src="https://dl.dropboxusercontent.com/s/08an1vduqv60gof/IMG_8465.jpg?dl=0" alt="Second slide">
-              <div class="container">
-                <div class="carousel-caption">
-                  <h1>Another example headline.</h1>
-                  <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-                  <p><a class="btn btn-lg btn-primary" href="#" role="button">Learn more</a></p>
-                </div>
-              </div>
-            </div>
-            <div class="carousel-item">
-              <img class="third-slide" src="https://dl.dropboxusercontent.com/s/08an1vduqv60gof/IMG_8465.jpg?dl=0" alt="Third slide">
-              <div class="container">
-                <div class="carousel-caption text-right">
-                  <h1>One more for good measure.</h1>
-                  <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-                  <p><a class="btn btn-lg btn-primary" href="#" role="button">Browse gallery</a></p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="sr-only">Previous</span>
-          </a>
-          <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="sr-only">Next</span>
-          </a>
-        </div>
+<div id="demo" class="carousel slide" data-ride="carousel">
+
+<!-- Indicators -->
+<ul class="carousel-indicators">
+  <li data-target="#demo" data-slide-to="0" class="active"></li>
+  <li data-target="#demo" data-slide-to="1"></li>
+  <li data-target="#demo" data-slide-to="2"></li>
+</ul>
+
+<!-- The slideshow -->
+<div class="carousel">
+  <div class="carousel-item active">
+    <img src="http://www.americansouthwest.net/colorado/photographs569/window-rock-view.jpg" alt="Los Angeles" width="1100" height="500">
+    <div class="container">
+      <div class="carousel-caption text-left">
+        @if(count($posts) > 0)
+        @foreach($posts as $post)
+          <h1>{{$post->title}}</h1>
+          <p>{!!$post->body!!}</p>
+         @endforeach  
+         @else
+              <p>No Posts Found</p>
+          @endif
+          <a class="btn btn-lg btn-primary" href="/posts/{{$post->id}}" role="button">Find Out More</a></p>
+      </div>
+    </div>
+  </div>
+  <div class="carousel-item">
+    <img src=""
+  </div>
+  <div class="carousel-item">
+    <img src="ny.jpg" alt="New York" width="1100" height="500">
+  </div>
+</div>
+
+<!-- Left and right controls -->
+<a class="carousel-control-prev" href="#demo" data-slide="prev">
+  <span class="carousel-control-prev-icon"></span>
+</a>
+<a class="carousel-control-next" href="#demo" data-slide="next">
+  <span class="carousel-control-next-icon"></span>
+</a>
+</div>
   
   
         <!-- Marketing messaging and featurettes
@@ -73,7 +62,7 @@
               <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
             </div><!-- /.col-lg-4 -->
             <div class="col-lg-4">
-              <img class="rounded-circle" src="data:image/png;base64,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" alt="Generic placeholder image" width="140" height="140">
+              <img class="rounded-circle" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAk1BMVEVFfptAanr///9xnLNMdofd5+xtma9FfpyerrY1ZHU+aHhYg5VTeIbH09g5ZnYzdZTn7/Jnk6p8mKNqh5NGb3+zwshDd5BBboGbuMhgjqdDdo5BbYBCcohEfJc9eZhJcH+mvsyOpa5jg5CvxtNNgpyNq71jiZng6e3L19uApLjS3+Z/mqXz9/kpXW+Mo6y6zdjAzNEGHzoHAAAErUlEQVR4nO3bb1/aMBAH8GSoRRT/DrACdU6Ygm76/l/dAigCbSBJL5e7fu73cE/Y99Pr9XKtSjU8rdT/gegRIf+IkH9EyD8i5B8R8o8I+UeE/CNC/hEh/4iQf0TIPyLkHxHyjwj5R4T8I0L+ESH/iJB/RMg/IuQfEfKPCPlHhPwjQv4RIf+IkH9EyD8i5J9Ewszpn0CCLsyKQk3y/LqcSZwfxBVmhcpb01/vL/Orcm76UX4TVVhks6f51Q9Lbi7uY5QqpjCbda28pVCPxvBEPGGRv+/zLYV6AF+paMKidbzXtxJqfQ99FbGExeztAPBTqAfARCShA/BLqIdj0J/GERb5YeBaqIegPRVJOD8M/BZq01PhfhtFWEwdgJtCPYB7bOBcw2dfoalUKCKGsJg63IU7QlOpQDcjitDlLiwJTU8FIWIIr52KtCQ0T3+IX0cQFndORVohBOmpCMLLJydglRCCiCDMuuHCxdO/ZhCEE7dGUy2s31PjC7PcUfhaLTRP/1q/j3ANT6zHpvnrzUbOO9VCPax1aEwofHv9e3qxERtwWanhSSj8Z6nKSmL40z+d8MValbCVmk7Y++kB1IsBJ+wy8hGGPv0ZCfWgH3IVOQnDRnFeQj3wvxmZCQMGHG5C/57KT+j79Gco9FzEcRSaAceDyFLodWiMJ8w+U1iFF9vxIrpXajRhvs6setX2cbuTB7/L6DqKxxJedr9f0FcCy7Gd8W1xnFOjCQ+9Dy3HsqepSyQk/O1zXlxm4DKnEhI+eAudeiohodeZf008WKl0hM8h19BhvcFeePDQSEfYDZ5x9lcqHWEvFHjgOyM6wna4cO+hkY7wMfA2XMVeqXSE3iPNdqzrDTrC23pC6xdxZITP/kPbTjrV72/ICI9rCy2VSkb4ETS07cQMOKVSJSPseR6ALSkv4qIJ3b6h+U4b4BIuUlpvxBIW07uvPFUf8ruP7c0A3Iar7I7iCF8qWDZR7VMgUinbh8b4QtuuLZ5wu6em25dGFG5VajOFm19vNFX4PYo3Vrh+J95c4VelNlm4IjZauHwN12zhYr3RdKEenTRd2DkToQhFKEIRilCEIhShCEUoQhGKUIQiFKEIRShCEYpQhDyE+kiEIhShCEUoQhGKEERY/blwg4R5r1uRF98/+yUsVJOz84rU+XN8akI1HnXKQQLiCFXWx/KkEprLOGi6MBuPGi5UmbofNluoUlUqptBUKloHTSM0SdBTkYVqjH4zYgsVek9FF6L3VHShSR+1p6YQ4lZqEqGp1IYLTfpoN2MqId6cmkpoKhWJmEy4ODSiVGpCIdIonlSIcjMmFSqMnppaGL9SkwtV7J5KQBh5EUdAGLlSSQij9lQSQjPgxOupNIQqYqWSEUZbxJERmsQ5NFISxqlUUsIoPZWUMMp6g5ZQRVjEkROCL+LoCaErlZ5QAb+/ISkErVSaQshFHE2hAlxvkBWCVSpdIdSAQ1eogCqVtBBkFKcthFjEURfWX8RRF9avVPrCuj2VvrDu1xsMhKpepfIQmjk1eBHHQ2iMwYdGLsLwL+L4CENHcUbCwJ7KSKjCFnG8hCGVykyYFSPPv0XpHKkWs1wf+eXPf52ri2jgSn9YAAAAAElFTkSuQmCC" alt="Generic placeholder image" width="140" height="140">
               <h2>Follow Us</h2>
               <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
               <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
