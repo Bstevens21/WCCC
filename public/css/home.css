@@ -1,7 +1,31 @@
 
   .carousel-caption {
-    bottom: 6rem;
     z-index: 10;
     text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    left: 15%;
+    top: 50% !important;
+    transform: translateY(-50%);
+    text-align: left;
+    bottom: initial;
   }
-  
+  .carousel-item > img {
+    min-width: 100%;
+    height: auto;
+  }
+  .carousel-item {
+    height: auto;
+  }
+  .carousel {
+    min-width: 100%;
+    height: auto;
+  }
+
+  .carousel-control-prev {
+    height: auto;
+  }
+
+  .carousel-control-next{
+    height: auto;
+  }
+
+ 

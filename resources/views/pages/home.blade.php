@@ -20,7 +20,7 @@
 <!-- The slideshow -->
 <div class="carousel">
   <div class="carousel-item active">
-    <img src="img/pic4.jpg" alt="Los Angeles" width="1100" height="500">
+    <img class="img-fluid" src="img/pic4.jpg" alt="Los Angeles" width="1100" height="500">
       <div class="container">
         <div class="carousel-caption text-left">
           @if(count($posts) > 0)
@@ -31,7 +31,7 @@
           @else
             <p>No Posts Found</p>
           @endif
-        <a class="btn btn-lg btn-primary" href="/posts/{{$post->id}}" role="button">View Post</a>
+        <a class="btn btn-primary" href="/posts/{{$post->id}}" role="button">View Post</a>
       </div>
     </div>
   </div>
