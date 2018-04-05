@@ -20,9 +20,9 @@
 <!-- The slideshow -->
 <div class="carousel">
   <div class="carousel-item active">
-    <img class="img-fluid" src="img/pic4.jpg" alt="Los Angeles" width="1100" height="500">
+    <img class="img-fluid" src="img/pic6.jpg" alt="Los Angeles" width="1100" height="500">
       <div class="container">
-        <div class="carousel-caption text-left">
+        <div class="carousel-caption d-none d-md-block">
           @if(count($posts) > 0)
           @foreach($posts as $post)
             <h1>{{$post->title}}</h1>
@@ -36,10 +36,10 @@
     </div>
   </div>
   <div class="carousel-item">
-    <img src="img/pic3.jpg" class="img-responsive" alt="slide two" >
+    <img src="img/pic2.jpg" class="img-responsive" alt="slide two" >
   </div>
   <div class="carousel-item">
-    <img src="img/pic2.jpg" alt="slide three" width="1100" height="500">
+    <img src="img/pic7.jpg" alt="slide three" width="1100" height="500">
   </div>
 </div>
 

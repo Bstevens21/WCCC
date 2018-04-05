@@ -1,12 +1,13 @@
 
   .carousel-caption {
-    z-index: 10;
     text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
-    left: 15%;
-    top: 50% !important;
-    transform: translateY(-50%);
-    text-align: left;
-    bottom: initial;
+    text-align: center;
+    top: 40%;
+  }
+  .carousel-caption > p {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
   }
   .carousel-item > img {
     min-width: 100%;
