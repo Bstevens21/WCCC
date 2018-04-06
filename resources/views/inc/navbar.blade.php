@@ -14,7 +14,7 @@
       About
     </a>
     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-      <a class="dropdown-item" href="#">The Team</a>
+      <a class="dropdown-item" href="/about">The Team</a>
       <a class="dropdown-item" href="#">The Areas</a>
       <div class="dropdown-divider"></div>
       <a class="dropdown-item" href="#">The History</a>

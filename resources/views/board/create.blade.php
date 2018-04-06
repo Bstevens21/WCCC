@@ -5,16 +5,16 @@
         <div class="flex-center position-ref full-height">
             <div class="content">
                 <div class="title m-b-md">
-                    {{$page}}
+                   
                 </div>
-                {!! Form::open(['action' => 'PostsController@store', 'method' => 'POST']) !!}
+                {!! Form::open(['action' => 'BoardMembersController@store', 'method' => 'POST']) !!}
                     <div class="form-group">
-                        {{Form::label('title', 'Title')}}
-                        {{Form::text('title', '', ['class' => 'form-control', 'placeholder' => 'Title'])}}
+                        {{Form::label('name', 'Name')}}
+                        {{Form::text('name', '', ['class' => 'form-control', 'placeholder' => 'Name'])}}
                     </div>
                     <div class="form-group">
-                            {{Form::label('body', 'Body')}}
-                            {{Form::textarea('body', '', ['id' => 'article-ckeditor','class' => 'form-control', 'placeholder' => 'Body'])}}
+                            {{Form::label('description', 'Description')}}
+                            {{Form::textarea('description', '', ['id' => 'article-ckeditor','class' => 'form-control', 'placeholder' => 'Description'])}}
                     </div>
                     {{Form::submit('Submit', ['class' => 'btn btn-primary'])}}
                 {!! Form::close() !!}

@@ -1,0 +1,112 @@
+<?php
+
+namespace App\Http\Controllers;
+
+use Illuminate\Http\Request;
+use App\BoardMember;
+
+class BoardMembersController extends Controller
+{
+    /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function index()
+    {
+        $boardMembers = BoardMember::all();
+        return view('board.about')->with('boardMembers', $boardMembers);
+    }
+
+    /**
+     * Show the form for creating a new resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function create()
+    {
+        return view('board.create');
+    }
+
+    /**
+     * Store a newly created resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\Response
+     */
+    public function store(Request $request)
+    {
+        $this->validate($request, [
+            'name' => 'required',
+            'description' => 'required'
+        ]);
+
+        //Create Board Member
+        $boardMember = new boardMember;
+        $boardMember->name = $request->input('name');
+        $boardMember->description = $request->input('description');
+        $boardMember->save();
+
+        return redirect('/about')->with('success', 'Board Member Created');
+    }
+
+    /**
+     * Display the specified resource.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function show($id)
+    {
+        //
+    }
+
+    /**
+     * Show the form for editing the specified resource.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function edit($id)
+    {
+        // $page = 'Edit Board Member';
+        $boardMember = boardMember::find($id);
+        return view('board.edit')->with('boardMember', $boardMember);
+    }
+
+    /**
+     * Update the specified resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function update(Request $request, $id)
+    {
+        $this->validate($request, [
+            'name' => 'required',
+            'description' => 'required'
+        ]);
+
+        //Create Board Member
+        $boardMember = boardMember::find($id);
+        $boardMember->name = $request->input('name');
+        $boardMember->description = $request->input('description');
+        $boardMember->save();
+
+        return redirect('/about')->with('success', 'Boardmember Updated');
+    }
+
+    /**
+     * Remove the specified resource from storage.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function destroy($id)
+    {
+        $boardMember = boardMember::find($id);
+        $boardMember->delete();
+        return redirect('/about')->with('success', 'Board Member Removed');
+    }
+}
