@@ -14,6 +14,11 @@ class PagesController extends Controller
         return view('pages.home')->with('page', $page)->with('posts', $posts);;
     }
 
+    public function login(){
+        return view('auth.login');
+    }
+
+
     public function about(){
         $page = 'About';
         return view('pages.about')->with('page', $page);

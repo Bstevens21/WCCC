@@ -17,6 +17,7 @@
                             {{Form::textarea('description', '', ['id' => 'article-ckeditor','class' => 'form-control', 'placeholder' => 'Description'])}}
                     </div>
                     {{Form::submit('Submit', ['class' => 'btn btn-primary'])}}
+                    @csrf
                 {!! Form::close() !!}
             </div>
         </div>

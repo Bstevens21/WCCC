@@ -64,7 +64,9 @@
         </address>
     </div>
     </div>
-    <a href="/about/create" class="btn btn-primary my-2">Create</a>
+    @if(!Auth::guest())
+        <a href="/about/create" class="btn btn-primary my-2">Create</a>
+    @endif
     <!-- /.row -->
     <div class="row">
         @if(count($boardMembers) > 0)

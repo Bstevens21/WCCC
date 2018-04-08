@@ -19,6 +19,7 @@
                     </div>
                     {{Form::hidden('_method', 'PUT')}}
                     {{Form::submit('Submit', ['class' => 'btn btn-primary'])}}
+                    @csrf
                 {!! Form::close() !!}
             </div>
         </div>

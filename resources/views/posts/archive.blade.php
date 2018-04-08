@@ -5,25 +5,16 @@
 <link rel="stylesheet" href="css/archive.css">
 
 <div class="flex-center position-ref full-height">
-    @if (Route::has('login'))
-        <div class="top-right links">
-            @auth
-                <a href="{{ url('/home') }}">Home</a>
-            @else
-                <a href="{{ route('login') }}">Login</a>
-                <a href="{{ route('register') }}">Register</a>
-            @endauth
-        </div>
-    @endif
-
     <div class="content">
         <section class="jumbotron text-center">
                 <div class="container">
                   <h1 class="jumbotron-heading">Archive</h1>
                   <p class="lead text-muted">This is the archive of our blog posts</p>
-                  <p>
-                    <a href="/posts/create" class="btn btn-primary my-2">Create</a>
-                  </p>
+                  @if(!Auth::guest())
+                    <p>
+                        <a href="/posts/create" class="btn btn-primary my-2">Create</a>
+                    </p>
+                  @endif
                 </div>
         </section>
        
@@ -37,12 +28,18 @@
                         <h3><a href="/posts/{{$post->id}}">{{$post->title}}<a></h3>
                         <p class="card-text">{!!$post->body!!}</p>
                 </div>
+            
                 <div class="card-footer">
                     <div class="d-flex justify-content-between align-items-center">   
-                            <div class="btn-group">
-                                <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                                <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                        @if(!Auth::guest())
+                            <div class="btn-group"> 
+                                <a class="btn btn-sm btn-outline-secondary" href="/posts/{{$post->id}}/edit">Edit</a>
+                                {!!Form::open(['action' => ['PostsController@destroy', $post->id], 'method' => 'POST',])!!}
+                                    {{Form::hidden('_method', 'DELETE')}}
+                                    {{Form::submit('Delete', ['class' => 'btn btn-danger btn-sm btn-outline-secondary'])}}
+                                {!!Form::close()!!}
                             </div>
+                        @endif
                             <small class="text-muted">Created on: {{$post->created_at}}</small>
                         </div>
                 </div>

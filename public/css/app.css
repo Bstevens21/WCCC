@@ -24,7 +24,13 @@ body {
     color: #5a5a5a;
   }
   
-  
+  .navbar-brand
+{
+    position: relative;
+    width: auto;
+    left: 15px;
+    max-height: 40px; /* height of the navbar */
+}
   /* CUSTOMIZE THE CAROUSEL
   -------------------------------------------------- */
   
