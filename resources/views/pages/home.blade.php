@@ -36,10 +36,10 @@
     </div>
   </div>
   <div class="carousel-item">
-    <img src="img/pic2.jpg" class="img-responsive" alt="slide two" >
+    <img src="img/pic11.jpg" class="img-responsive" alt="slide two" >
   </div>
   <div class="carousel-item">
-    <img src="img/pic7.jpg" alt="slide three" width="1100" height="500">
+    <img src="img/pic12.jpg" alt="slide three" width="1100" height="500">
   </div>
 </div>
 
@@ -92,7 +92,7 @@
         <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
       </div>
       <div class="col-md-5">
-        <img class="featurette-image img-fluid mx-auto" src="https://photos-5.dropbox.com/t/2/AADtqtC2-3ybEVPIS5SZ4hrss4JpGM98O1PbHCFMrVQ3Hg/12/192203035/jpeg/32x32/1/_/1/2/Redstone%20NewYears2018%20(LoRes)-9357.jpg/EODLwc4JGNMBIAcoBw/JFwoCB9O_JZcwY3URB5EweYwmp5n35nNLf3y3mm02uM?size=1280x960&size_mode=3" alt="Generic placeholder image">
+        <img class="featurette-image img-fluid mx-auto" src="https://photos-5.dropbox.com/t/2/AAAGhTLeO14K6eT07Qd71vLdqNiXkdvJdmwN9vHF5X8yIA/12/117288735/jpeg/32x32/3/1523257200/0/2/IMG_4121.JPG/EMbWvloYsxkgBygH/nX5OrBc6A3CbX7CaxpAcjK7biJStNmTAJ1Yw1gQxoQM%2CPJUSixfEt7Oh0ChNeClzL-FPoWU2TAD02nhOuEDT4iE?dl=0&size=1280x960&size_mode=3" alt="Generic placeholder image">
       </div>
     </div>
 
