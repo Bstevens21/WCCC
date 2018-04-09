@@ -73,7 +73,7 @@
         @foreach($boardMembers as $boardMember)
         <div class="col-sm-4 my-4">
         <div class="card">
-            <img class="card-img-top" src="img/user1.jpg" alt="">
+        <img class="card-img-top" src="/storage/about_images/{{$boardMember->about_image}}" alt="">
         <div class="card-body">
             <h2 class="card-title">{{$boardMember->name}}</h2>
             <p class="card-text">{!!$boardMember->description!!}</p>

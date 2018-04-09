@@ -7,7 +7,7 @@
                 <div class="title m-b-md">
                    
                 </div>
-                {!! Form::open(['action' => 'BoardMembersController@store', 'method' => 'POST']) !!}
+                {!! Form::open(['action' => 'BoardMembersController@store', 'method' => 'POST', 'enctype' => 'multipart/form-data']) !!}
                     <div class="form-group">
                         {{Form::label('name', 'Name')}}
                         {{Form::text('name', '', ['class' => 'form-control', 'placeholder' => 'Name'])}}
@@ -15,6 +15,9 @@
                     <div class="form-group">
                             {{Form::label('description', 'Description')}}
                             {{Form::textarea('description', '', ['id' => 'article-ckeditor','class' => 'form-control', 'placeholder' => 'Description'])}}
+                    </div>
+                    <div class="form-group">
+                            {{Form::file('about_image')}}
                     </div>
                     {{Form::submit('Submit', ['class' => 'btn btn-primary'])}}
                     @csrf

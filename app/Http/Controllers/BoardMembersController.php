@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 use App\BoardMember;
 
 class BoardMembersController extends Controller
@@ -49,13 +50,36 @@ class BoardMembersController extends Controller
     {
         $this->validate($request, [
             'name' => 'required',
-            'description' => 'required'
+            'description' => 'required',
+            'about_image' => 'image|nullable|max:1999'
         ]);
+
+        //Handle File Upload
+        if($request->hasFile('about_image')){
+            //get filename with extension
+            $fileNameWithExt = $request->file('about_image')->getClientOriginalName();
+
+            //Get just filename
+            $filename = pathinfo($fileNameWithExt, PATHINFO_FILENAME);
+
+            //Get just extension
+            $extension = $request->file('about_image')->getClientOriginalExtension();
+
+            //Filename to store
+            $fileNameToStore = $filename.'_'.time().'.'.$extension;
+
+            //Upload image
+            $path = $request->file('about_image')->storeAs('public/about_images', $fileNameToStore);
+
+        }else{
+            $fileNameToStore = 'noimage.jpg';
+        }
 
         //Create Board Member
         $boardMember = new boardMember;
         $boardMember->name = $request->input('name');
         $boardMember->description = $request->input('description');
+        $boardMember->about_image = $fileNameToStore;
         $boardMember->save();
 
         return redirect('/about')->with('success', 'Board Member Created');
@@ -99,10 +123,31 @@ class BoardMembersController extends Controller
             'description' => 'required'
         ]);
 
+        //Handle File Upload
+        if($request->hasFile('about_image')){
+            //get filename with extension
+            $fileNameWithExt = $request->file('about_image')->getClientOriginalName();
+    
+            //Get just filename
+            $filename = pathinfo($fileNameWithExt, PATHINFO_FILENAME);
+    
+            //Get just extension
+            $extension = $request->file('about_image')->getClientOriginalExtension();
+    
+            //Filename to store
+            $fileNameToStore = $filename.'_'.time().'.'.$extension;
+    
+            //Upload image
+            $path = $request->file('about_image')->storeAs('public/about_images', $fileNameToStore);
+        }
+
         //Create Board Member
         $boardMember = boardMember::find($id);
         $boardMember->name = $request->input('name');
         $boardMember->description = $request->input('description');
+        if($request->hasFile('about_image')){
+            $boardMember->about_image = $fileNameToStore;
+        }
         $boardMember->save();
 
         return redirect('/about')->with('success', 'Boardmember Updated');
@@ -117,6 +162,12 @@ class BoardMembersController extends Controller
     public function destroy($id)
     {
         $boardMember = boardMember::find($id);
+
+        if($boardMember->about_image != 'noimage.jpg'){
+            //Delete Image
+            Storage::delete('public/about_images/'.$boardMember->about_image);
+        }
+
         $boardMember->delete();
         return redirect('/about')->with('success', 'Board Member Removed');
     }
