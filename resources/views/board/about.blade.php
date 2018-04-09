@@ -31,7 +31,7 @@
     </div>
     <div class="col-sm-4">
         <h2 class="mt-4">Contact Us</h2>
-        <address>
+        <address>   
         <strong>WCCC</strong>
         <br>261 East 200 South
         <br>Moab, Utah 84532
@@ -56,7 +56,7 @@
                     <div class="d-flex justify-content-between align-items-center">   
                         @if(!Auth::guest())
                             <div class="btn-group"> 
-                                <a class="btn btn-sm btn-outline-secondary" href="/boardmembers/{{$boardMember->id}}/edit">Edit</a>
+                                <a class="btn btn-sm btn-outline-secondary" href="/about/{{$boardMember->id}}/edit">Edit</a>
                                 {!!Form::open(['action' => ['BoardMembersController@destroy', $boardMember->id], 'method' => 'POST',])!!}
                                     {{Form::hidden('_method', 'DELETE')}}
                                     {{Form::submit('Delete', ['class' => 'btn btn-danger btn-sm btn-outline-secondary'])}}

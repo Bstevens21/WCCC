@@ -8,7 +8,7 @@
                 <div class="title m-b-md">
                     {{-- {{$page}} --}}
                 </div>
-                {!! Form::open(['action' => ['BoardMembersController@update', $boardMember->id], 'method' => 'POST']) !!}
+                {!! Form::open(['action' => ['BoardMembersController@update', $boardMember->id], 'method' => 'POST', 'enctype' => 'multipart/form-data']) !!}
                     <div class="form-group">
                         {{Form::label('name', 'Name')}}
                         {{Form::text('name', $boardMember->name, ['class' => 'form-control', 'placeholder' => 'Name'])}}
@@ -18,6 +18,9 @@
                             {{Form::textarea('description', $boardMember->description, ['id' => 'article-ckeditor','class' => 'form-control', 'placeholder' => 'Description'])}}
                     </div>
                     {{Form::hidden('_method', 'PUT')}}
+                    <div class="form-group">
+                        {{Form::file('about_image')}}
+                    </div>
                     {{Form::submit('Submit', ['class' => 'btn btn-primary'])}}
                     @csrf
                 {!! Form::close() !!}

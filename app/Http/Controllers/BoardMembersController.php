@@ -51,7 +51,7 @@ class BoardMembersController extends Controller
         $this->validate($request, [
             'name' => 'required',
             'description' => 'required',
-            'about_image' => 'image|nullable|max:1999'
+            'about_image' => 'image|nullable|mimes:jpeg,jpg,png|max:1999'
         ]);
 
         //Handle File Upload
@@ -120,7 +120,8 @@ class BoardMembersController extends Controller
     {
         $this->validate($request, [
             'name' => 'required',
-            'description' => 'required'
+            'description' => 'required',
+            'about_image' => 'image|nullable|mimes:jpeg,jpg,png|max:1999'
         ]);
 
         //Handle File Upload
@@ -146,6 +147,9 @@ class BoardMembersController extends Controller
         $boardMember->name = $request->input('name');
         $boardMember->description = $request->input('description');
         if($request->hasFile('about_image')){
+            if($boardMember->about_image != 'noimage.jpg') {
+                Storage::delete('public/about_images'.$boardMember->about_image);
+            }
             $boardMember->about_image = $fileNameToStore;
         }
         $boardMember->save();
