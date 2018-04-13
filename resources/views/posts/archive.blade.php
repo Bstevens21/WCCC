@@ -22,28 +22,32 @@
             <div class="card-column">
                 @if(count($posts) > 0)
                 @foreach($posts as $post)
-                <div class="card box-shadow mb-5">
-                    {{--  <img class="card-img-top" src="img/pic2.jpg" alt="Card image cap">  --}}
-                    <div class="card-body">
-                        <h3><a href="/posts/{{$post->id}}">{{$post->title}}<a></h3>
-                        <p class="card-text">{!!$post->body!!}</p>
-                </div>
-            
-                <div class="card-footer">
-                    <div class="d-flex justify-content-between align-items-center">   
-                        @if(!Auth::guest())
-                            <div class="btn-group"> 
-                                <a class="btn btn-sm btn-outline-secondary" href="/posts/{{$post->id}}/edit">Edit</a>
-                                {!!Form::open(['action' => ['PostsController@destroy', $post->id], 'method' => 'POST',])!!}
-                                    {{Form::hidden('_method', 'DELETE')}}
-                                    {{Form::submit('Delete', ['class' => 'btn btn-danger btn-sm btn-outline-secondary'])}}
-                                {!!Form::close()!!}
+                    <div class="card box-shadow mb-5">
+                        @foreach(explode(',', $post->post_images) as $image)
+                            <div>
+                                <img class="card-img-top" src="storage/post_images/{{$image}}" alt="Card image cap"> 
                             </div>
-                        @endif
-                            <small class="text-muted">Created on: {{$post->created_at}}</small>
-                        </div>
+                        @endforeach
+                        <div class="card-body">
+                            <h3><a href="/posts/{{$post->id}}">{{$post->title}}<a></h3>
+                            <p class="card-text">{!!$post->body!!}</p>
+                    </div>
+                
+                    <div class="card-footer">
+                        <div class="d-flex justify-content-between align-items-center">   
+                            @if(!Auth::guest())
+                                <div class="btn-group"> 
+                                    <a class="btn btn-sm btn-outline-secondary" href="/posts/{{$post->id}}/edit">Edit</a>
+                                    {!!Form::open(['action' => ['PostsController@destroy', $post->id], 'method' => 'POST',])!!}
+                                        {{Form::hidden('_method', 'DELETE')}}
+                                        {{Form::submit('Delete', ['class' => 'btn btn-danger btn-sm btn-outline-secondary'])}}
+                                    {!!Form::close()!!}
+                                </div>
+                            @endif
+                                <small class="text-muted">Created on: {{$post->created_at}}</small>
+                            </div>
+                    </div>
                 </div>
-            </div>
                 
                 @endforeach
                 {{$posts->links()}}

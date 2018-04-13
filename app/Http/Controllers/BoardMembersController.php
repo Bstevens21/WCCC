@@ -76,7 +76,7 @@ class BoardMembersController extends Controller
         }
 
         //Create Board Member
-        $boardMember = new boardMember;
+        $boardMember = new BoardMember;
         $boardMember->name = $request->input('name');
         $boardMember->description = $request->input('description');
         $boardMember->about_image = $fileNameToStore;
@@ -105,7 +105,7 @@ class BoardMembersController extends Controller
     public function edit($id)
     {
         // $page = 'Edit Board Member';
-        $boardMember = boardMember::find($id);
+        $boardMember = BoardMember::find($id);
         return view('board.edit')->with('boardMember', $boardMember);
     }
 
@@ -143,7 +143,7 @@ class BoardMembersController extends Controller
         }
 
         //Create Board Member
-        $boardMember = boardMember::find($id);
+        $boardMember = BoardMember::find($id);
         $boardMember->name = $request->input('name');
         $boardMember->description = $request->input('description');
         if($request->hasFile('about_image')){
@@ -165,7 +165,7 @@ class BoardMembersController extends Controller
      */
     public function destroy($id)
     {
-        $boardMember = boardMember::find($id);
+        $boardMember = BoardMember::find($id);
 
         if($boardMember->about_image != 'noimage.jpg'){
             //Delete Image
