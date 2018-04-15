@@ -20,7 +20,7 @@
 <!-- The slideshow -->
 <div class="carousel">
   <div class="carousel-item active">
-    <img class="img-fluid" src="img/pic6.jpg" alt="Los Angeles" width="1100" height="500">
+    <img class="img-fluid" src="img/pic61.jpg" alt="Los Angeles" width="1100" height="500">
       <div class="container">
         <div class="carousel-caption d-none d-md-block">
           @if(count($posts) > 0)
