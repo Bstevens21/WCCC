@@ -23,11 +23,15 @@
                 @if(count($posts) > 0)
                 @foreach($posts as $post)
                     <div class="card box-shadow mb-5">
+                        <div class="container">
+                        <div class="row">
                         @foreach(explode(',', $post->post_images) as $image)
-                            <div>
-                                <img class="card-img-top" src="storage/post_images/{{$image}}" alt="Card image cap"> 
-                            </div>
+                            <div class="text-center">
+                                <img class="card-img-top post-img img-thumbnail" src="storage/post_images/{{$image}}" alt="Card image cap">
+                            </div> 
                         @endforeach
+                        </div>
+                        </div>
                         <div class="card-body">
                             <h3><a href="/posts/{{$post->id}}">{{$post->title}}<a></h3>
                             <p class="card-text">{!!$post->body!!}</p>
