@@ -25,11 +25,9 @@
                     <div class="card box-shadow mb-5">
                         <div class="container">
                         <div class="row">
-                        @foreach(explode(',', $post->post_images) as $image)
                             <div class="text-center">
-                                <img class="card-img-top post-img img-thumbnail" src="storage/post_images/{{$image}}" alt="Card image cap">
+                                <img class="card-img-top post-img img-thumbnail" src="storage/post_images/{{explode(',', $post->post_images)[0]}}" alt="Card image cap">
                             </div> 
-                        @endforeach
                         </div>
                         </div>
                         <div class="card-body">
