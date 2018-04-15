@@ -15,6 +15,8 @@ Route::get('/', 'PagesController@index');
 
 Route::get('/wccc-admin','PagesController@login');
 
+Route::resource('join', 'EmailController');
+
 Route::resource('posts', 'PostsController');
 
 Route::resource('about', 'BoardMembersController');
