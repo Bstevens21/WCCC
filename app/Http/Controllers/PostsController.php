@@ -205,10 +205,16 @@ class PostsController extends Controller
         if($post->post_images != 'noimage.jpg'){
             $post_images = $post->post_images;
             $images = explode(',', $post_images);
-            foreach($images as $image){
-                Storage::delete('public/post_images/'.$image);
+            if(count($images) > 1){
+                foreach($images as $image){
+                    Storage::delete('public/post_images/'.$image);
+                }
+            if(count($images) > 1){
+                Storage::delete('public/post_images/'.$images[0]);
             }
+
         }
+    }
 
         $post->delete();
         return redirect('/posts')->with('success', 'Post Removed');
