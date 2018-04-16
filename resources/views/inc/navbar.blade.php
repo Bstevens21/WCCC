@@ -16,7 +16,7 @@
      <a class="nav-link" href="/posts">Archive <span class="sr-only">(current)</span></a>
     </li>
     @if(!Auth::guest())
-      <li><a class="nav-link" href="{{ route('register') }}">Register</a></li>
+      {{-- <li><a class="nav-link" href="{{ route('register') }}">Register</a></li> --}}
       <li>
         <a class="nav-link" href="{{ route('logout') }}"
           onclick="event.preventDefault();
