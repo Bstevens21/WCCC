@@ -4,7 +4,7 @@
      <span class="navbar-toggler-icon"></span>
    </button>
 
-<div class="collapse navbar-collapse" id="navbarNavDropdown">
+<div class="collapse navbar-collapse text-center" id="navbarNavDropdown">
  <ul class="navbar-nav mr-auto">
    <li class="nav-item active">
      <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
@@ -38,8 +38,8 @@
    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
  </form> --}}
- <form class="form-inline">
+ <div>
   <button class="btn btn-success" type="button">Donate</button>
-</form>
+ </div>
 </div>
 </nav>

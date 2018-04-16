@@ -29,12 +29,11 @@
                         <div class="text center">
                         <img class="card-img-top post-img img-thumbnail" src="storage/post_images/{{explode(',', $post->post_images)[0]}}" alt="">
                         </div>
-                        <div class="card-text">
-                            <p>{!!$post->body!!}</p>
+                        <div class="card-body">
+                            <p> {!!$post->body!!}</p>
                         </div>
                 
                     <div class="card-footer">
-                        <div class="d-flex justify-content-between align-items-center">   
                             @if(!Auth::guest())
                                 <div class="btn-group"> 
                                     <a class="btn btn-sm btn-outline-secondary" href="/posts/{{$post->id}}/edit">Edit</a>
@@ -42,7 +41,6 @@
                                         {{Form::hidden('_method', 'DELETE')}}
                                         {{Form::submit('Delete', ['class' => 'btn btn-danger btn-sm btn-outline-secondary'])}}
                                     {!!Form::close()!!}
-                                </div>
                             @endif
                                 <small class="text-muted">Created on: {{$post->created_at}}</small>
                             </div>
