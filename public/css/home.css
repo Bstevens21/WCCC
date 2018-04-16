@@ -1,13 +1,7 @@
 
   .carousel-caption {
-    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
     text-align: center;
-    top: 40%;
-  }
-  .carousel-caption > p {
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
+    bottom: 50%;
   }
   .carousel-item > img {
     min-width: 100%;
@@ -29,4 +23,49 @@
     height: auto;
   }
 
+
+
+.carousel-title{
+  font-size: 5vw;
+  position: absolute;
+}
+.title-text{
+  font-size: 7vw;
+  font-weight: 300;
+}
+
+  /* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .get-involved{
+    margin-bottom: 30px;
+  }
+} 
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  .get-involved{
+    margin-bottom: 45px;
+  }
+} 
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  .get-involved{
+    margin-bottom: 60px;
+  }
+} 
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .get-involved{
+    margin-bottom: 75px;
+  }
+} 
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  .get-involved{
+    margin-bottom: 75px;
+  }
+}
  

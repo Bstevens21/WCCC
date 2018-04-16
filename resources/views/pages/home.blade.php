@@ -22,8 +22,8 @@
   <div class="carousel-item active">
     <img class="img-fluid" src="img/pic61.jpg" alt="Los Angeles" width="1100" height="500">
       <div class="container">
-        <div class="carousel-caption d-none d-md-block">
-          @if(count($posts) > 0)
+        <div class="carousel-caption">
+          {{-- @if(count($posts) > 0)
           @foreach($posts as $post)
             <h1>{{$post->title}}</h1>
             <p >{!!$post->body!!}</p>
@@ -31,7 +31,8 @@
           @endforeach  
           @else
             <p>No Posts Found</p>
-          @endif
+          @endif --}}
+          <h1 class="carousel-title">Preserving Access to Western Colorado Climbing</h1>
       </div>
     </div>
   </div>
@@ -51,7 +52,9 @@
   <span class="carousel-control-next-icon"></span>
 </a>
 </div>
-  
+
+
+
   
   <!-- Marketing messaging and featurettes
   ================================================== -->
@@ -59,6 +62,10 @@
 
   <div class="container marketing">
 
+      <div class="container-fluid text-center get-involved">
+          <h1 class="title-text">How to get involved</h1>
+      </div>
+      
     <!-- Three columns of text below the carousel -->
     <div class="row">
       <div class="col-lg-4">
@@ -92,7 +99,7 @@
         <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
       </div>
       <div class="col-md-5">
-        <img class="featurette-image img-fluid mx-auto" src="https://photos-5.dropbox.com/t/2/AAAGhTLeO14K6eT07Qd71vLdqNiXkdvJdmwN9vHF5X8yIA/12/117288735/jpeg/32x32/3/1523257200/0/2/IMG_4121.JPG/EMbWvloYsxkgBygH/nX5OrBc6A3CbX7CaxpAcjK7biJStNmTAJ1Yw1gQxoQM%2CPJUSixfEt7Oh0ChNeClzL-FPoWU2TAD02nhOuEDT4iE?dl=0&size=1280x960&size_mode=3" alt="Generic placeholder image">
+        <img class="featurette-image img-fluid mx-auto" src="img/featurette-1.jpeg" alt="featurette-1">
       </div>
     </div>
 

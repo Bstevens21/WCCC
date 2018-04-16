@@ -23,7 +23,7 @@
         <div class="card-footer">
         <small>Written on: {{$post->created_at}}</small>
         </div>
-        <a href="/posts" class="btn btn-primary">View All Posts</a>
+        <a href="/posts" class="btn btn-primary show-btn">View All Posts</a>
     </div>
 </div>
 @endsection
