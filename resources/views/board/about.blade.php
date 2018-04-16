@@ -7,14 +7,11 @@
 <title>About Us</title>
 
 <!-- Header with Background Image -->
-<header class="wccc-header">
-    <div class="container">
-    <div class="row">
-        <div class="col-lg-12">
-        <h1 class="display-3 text-center text-white mt-4">Preserving Access to Western Colorado</h1>
+
+<header class="wccc-header text-center">
+        <div>
+        <h1 class="header-text">About us</h1>
         </div>
-    </div>
-    </div>
 </header>
 
 <!-- Page Content -->
@@ -22,15 +19,13 @@
 
     <div class="row">
     <div class="col-sm-8">
-        <h2 class="mt-4">What We Do</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A deserunt neque tempore recusandae animi soluta quasi? Asperiores rem dolore eaque vel, porro, soluta unde debitis aliquam laboriosam. Repellat explicabo, maiores!</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis optio neque consectetur consequatur magni in nisi, natus beatae quidem quam odit commodi ducimus totam eum, alias, adipisci nesciunt voluptate. Voluptatum.</p>
-        <p>
-        <a class="btn btn-primary btn-lg" href="#">Call to Action &raquo;</a>
+        <h2 class="mt-4 about-title">History</h2>
+        <p>In 2008 one of our local crags in Unaweep Canyon was being sold. The Access Fund, the national climbing advocacy group, approached our community, instilling the need for local representation of climbers. With the guidance of the AF, we started the process toward becoming a nonprofit corporation and attempted to purchase the threatened crag.  By the next year we had gained IRS 501c3 status and were under contract to secure the climbing and to plan a better trail and parking area. 
+                Initially, we met at the Grand Junction Climbing Center and within the first year we had more than 80 members. The WCCC filled an instant need for organization to play an important stewardship role at local climbing areas, organizing trash cleanups and trail maintenance days, meeting with national park service and BLM personnel, and discussing threats to safe climbing and access, including private property issues surrounding the national monument and working on anchor replacements.
         </p>
     </div>
     <div class="col-sm-4">
-        <h2 class="mt-4">Contact Us</h2>
+        <h2 class="mt-4 about-title">Contact Us</h2>
         <address>   
         <strong>WCCC</strong>
         <br>261 East 200 South
@@ -39,20 +34,51 @@
         </address>
     </div>
     </div>
+
+    <hr class="about-divider">
+
+    <div class="container text-center">
+        <h1 class="about-title">Members of the Board</h1>
+        <p>The WCCC Board is comprised of an all-volunteer crew. We are busy with jobs and families and we love 
+            to climb! Most Board business is conducted electronically to accommodate our schedules,
+             and we meet in-person at least once a year. We host trail days and stewardship activities.</p>
+    </div>
+
     @if(!Auth::guest())
         <a href="/about/create" class="btn btn-primary my-2">Create</a>
     @endif
+
+    <div class="board">
     <!-- /.row -->
-    <div class="row">
         @if(count($boardMembers) > 0)
         @foreach($boardMembers as $boardMember)
-        <div class="col-sm-4 my-4">
-        <div class="card">
-        <img class="card-img-top" src="/storage/about_images/{{$boardMember->about_image}}" alt="">
-        <div class="card-body">
-            <h2 class="card-title">{{$boardMember->name}}</h2>
-            <p class="card-text">{!!$boardMember->description!!}</p>
-            <div class="card-footer">
+        <div class="row board-member">
+            <div class="col-md-3">
+                <img class="board-image" src="/storage/about_images/{{$boardMember->about_image}}" alt="">
+            </div>
+            <div class="col-md-9">
+                <h2>{{$boardMember->name}}</h2>
+                <p>{!!$boardMember->description!!}</p>
+                <div class="d-flex justify-content-between align-items-center">   
+                        @if(!Auth::guest())
+                            <div class="btn-group"> 
+                                <a class="btn btn-sm btn-outline-secondary" href="/about/{{$boardMember->id}}/edit">Edit</a>
+                                {!!Form::open(['action' => ['BoardMembersController@destroy', $boardMember->id], 'method' => 'POST',])!!}
+                                    {{Form::hidden('_method', 'DELETE')}}
+                                    {{Form::submit('Delete', ['class' => 'btn btn-danger btn-sm btn-outline-secondary'])}}
+                                {!!Form::close()!!}
+                            </div>
+                        @endif
+                    </div>
+            </div>
+        </div>
+        @endforeach
+        @else
+        <p>No Members Found</p>
+        @endif
+            
+            
+           {{--  <div class="card-footer">
                 <div class="d-flex justify-content-between align-items-center">   
                     @if(!Auth::guest())
                         <div class="btn-group"> 
@@ -64,17 +90,8 @@
                         </div>
                     @endif
                 </div>
-            </div>
+            </div> --}}
         </div>        
     </div>
-</div>
-    @endforeach
-@else
-<p>No Members Found</p>
-@endif
-</div>
-    </div>
-    <!-- /.row -->
-<!-- /.container -->
 
 @endsection

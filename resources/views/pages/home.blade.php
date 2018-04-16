@@ -95,8 +95,10 @@
 
     <div class="row featurette">
       <div class="col-md-7">
-        <h2 class="featurette-heading">First featurette heading. <span class="text-muted">It'll blow your mind.</span></h2>
-        <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+        <h2 class="featurette-heading">What we've accomplished.</h2>
+        <p class="lead">In 2009 we were able to secure an endangered piece of land that was slated to be sold off, then subdivided land including the cliff, trail, and parking lot. This land is now protected in perpetuity.
+            Over the years, we have taken title to other cliffs in Unaweep that were formerly owned by the Access Fund. We have worked with the national park service to work toward safe anchors in the Colorado National Monument, and we have represented climbing interests in Dominguez-Escalante. 
+            </p>
       </div>
       <div class="col-md-5">
         <img class="featurette-image img-fluid mx-auto" src="img/featurette-1.jpeg" alt="featurette-1">
@@ -107,11 +109,20 @@
 
     <div class="row featurette">
       <div class="col-md-7 order-md-2">
-        <h2 class="featurette-heading">Oh yeah, it's that good. <span class="text-muted">See for yourself.</span></h2>
-        <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+        <h2 class="featurette-heading">Where we protect.</h2>
+        <p class="lead">WCCC preserves access to
+            Unaweep Canyon
+            Colorado National Monument
+            Bullet Holes
+            Dynamite Shacks
+            Dominguez-Escalante National Conservation Area
+            Bangs Canyon
+            
+            so climbers of all levels can do what they love.
+            </p>
       </div>
       <div class="col-md-5 order-md-1">
-        <img class="featurette-image img-fluid mx-auto" src="https://photos-4.dropbox.com/t/2/AACestBgBEiigNtUnUV5oSHhXA13sHdjx-fxah-HemLZwQ/12/192203035/jpeg/32x32/1/_/1/2/Dave%20%26%20Susan%20Dec%202017-6554.jpg/EODLwc4JGNMBIAcoBw/NSHGOtgy5q0AS0eBwi8IlkqdsP4HDfZ9MX4iyurd3NY%2CToaaecsOH5iYDVrX-D6OpKAY7YAkYgwPDjpEX6NcjBo%2CgIZZtXuA8cxXhpbY4SRoa5a1c_UDMoYWPRs5VLwBPag%2Cxj2kjAvfuO8rKl1e20fWCdgcLAdIoa1235PIonhJ448?size=2048x1536&size_mode=3" alt="Generic placeholder image">
+        <img class="featurette-image img-fluid mx-auto" src="img/featurette-2.jpeg" alt="Generic placeholder image">
       </div>
     </div>
 
