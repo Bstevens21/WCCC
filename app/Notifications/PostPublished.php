@@ -33,6 +33,7 @@ class PostPublished extends Notification
      */
     public function toFacebookPoster($post)
     {
-        return with(new FacebookPosterPost($post->title . '\n' . $post->body));
+        $html = new \voku\Html2Text\Html2Text($post->body);
+        return with(new FacebookPosterPost($post->title."\n"."\n" .$html->getText()));
     }
 }
