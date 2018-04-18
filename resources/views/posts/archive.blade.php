@@ -4,6 +4,8 @@
 
 <link rel="stylesheet" href="css/archive.css">
 
+<title>Archive</title>
+
 <div class="flex-center position-ref full-height">
     <div class="content">
         <section class="jumbotron text-center">

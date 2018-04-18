@@ -34,12 +34,12 @@
     </form> --}}
   </li>
  </ul>
- {{-- <form class="form-inline my-2 my-lg-0">
-   <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-   <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
- </form> --}}
- <div>
-  <button class="btn btn-success" type="button">Donate</button>
- </div>
+ <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+  <input type="hidden" name="cmd" value="_s-xclick">
+  <input type="hidden" name="hosted_button_id" value="ETDDLHB8ZLZFL">
+  <input type="submit" value="Donate" class="btn btn-success">
+ {{--  <input type="image" src="img/donate.png" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+  <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1"> --}}
+ </form>  
 </div>
 </nav>

@@ -8,6 +8,8 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
 <link rel="stylesheet" href="css/home.css">
 
+<title>Western Colorado Climbers Coalition</title>
+
 <div id="demo" class="carousel slide" data-ride="carousel">
 
 <!-- Indicators -->
@@ -84,7 +86,13 @@
         <img class="rounded-circle" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRaMvNDgsDNVaUkXn_fH-ZXHTp_EwD0loJpeIcGCGz3wx-0G9mX" alt="Generic placeholder image" width="140" height="140">
         <h2>Donate</h2>
         <p>Every penny counts. Get involved now.</p>
-        <p><a class="btn btn-outline-secondary" href="#" role="button">Take Action &raquo;</a></p>
+        <p><form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+          <input type="hidden" name="cmd" value="_s-xclick">
+          <input type="hidden" name="hosted_button_id" value="ETDDLHB8ZLZFL">
+          <input type="submit" value="Take Action &raquo" class="btn btn-outline-secondary">
+         {{--  <input type="image" src="img/donate.png" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+          <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1"> --}}
+         </form> </p>
       </div><!-- /.col-lg-4 -->
     </div><!-- /.row -->
 
