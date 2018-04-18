@@ -17,6 +17,7 @@
   <li data-target="#demo" data-slide-to="0" class="active"></li>
   <li data-target="#demo" data-slide-to="1"></li>
   <li data-target="#demo" data-slide-to="2"></li>
+  <li data-target="#demo" data-slide-to="3"></li>
 </ul>
 
 <!-- The slideshow -->
@@ -43,6 +44,9 @@
   </div>
   <div class="carousel-item">
     <img src="img/pic12.jpg" alt="slide three" width="1100" height="500">
+  </div>
+  <div class="carousel-item">
+    <img src="img/pic3.jpg" alt="slide three" width="1100" height="500">
   </div>
 </div>
 
@@ -90,8 +94,6 @@
           <input type="hidden" name="cmd" value="_s-xclick">
           <input type="hidden" name="hosted_button_id" value="ETDDLHB8ZLZFL">
           <input type="submit" value="Take Action &raquo" class="btn btn-outline-secondary">
-         {{--  <input type="image" src="img/donate.png" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
-          <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1"> --}}
          </form> </p>
       </div><!-- /.col-lg-4 -->
     </div><!-- /.row -->
@@ -138,8 +140,10 @@
 
     <div class="row featurette">
       <div class="col-md-7">
-        <h2 class="featurette-heading">And lastly, this one. <span class="text-muted">Checkmate.</span></h2>
-        <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+        <h2 class="featurette-heading">We need to work together.</h2>
+        <p class="lead">We put in the hard work to keep these areas clean and available, but efforts from climbers like
+          you are the reason we thrive in this community. Every contribution helps, and you could join the cause.
+        </p>
       </div>
       <div class="col-md-5">
         <img class="featurette-image img-fluid mx-auto" src="https://photos-3.dropbox.com/t/2/AABA5d3WHpd7f3nGHWnHIstTkdPxKz9aHU4H0Kba3tjk9g/12/192203035/jpeg/32x32/1/_/1/2/Rob%20N%20Chandler%20Unaweep%20-3166.jpg/EODLwc4JGNMBIAcoBw/JzMj9fNhtUlxjIAuf29RiChSt4XykyDKqfdMMGm30Kk%2CT5otdtTnnrqC4CiydvC93ftFuHKZihX4UDiu_IYQblU%2ClTK1MCz2mCwa1ULUfR7ZBRYoiDUzF9KDOZtXp5aldVs?size=2048x1536&size_mode=3" alt="Generic placeholder image">

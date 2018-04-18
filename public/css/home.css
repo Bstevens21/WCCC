@@ -23,7 +23,11 @@
     height: auto;
   }
 
-
+.carousel-message{
+  color: white;
+  font-size: 2vw;
+  text-align: center;
+}
 
 .carousel-title{
   font-size: 3vw;
