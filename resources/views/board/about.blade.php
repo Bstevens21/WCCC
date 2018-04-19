@@ -53,10 +53,10 @@
         @if(count($boardMembers) > 0)
         @foreach($boardMembers as $boardMember)
         <div class="row board-member">
-            <div class="col-md-3">
+            <div class="col-md-2">
                 <img class="board-image" src="/storage/about_images/{{$boardMember->about_image}}" alt="">
             </div>
-            <div class="col-md-9">
+            <div class="col-md-10">
                 <h2>{{$boardMember->name}}</h2>
                 <p>{!!$boardMember->description!!}</p>
                 <div class="d-flex justify-content-between align-items-center">   
@@ -76,22 +76,24 @@
         @else
         <p>No Members Found</p>
         @endif
-            
-            
-           {{--  <div class="card-footer">
-                <div class="d-flex justify-content-between align-items-center">   
-                    @if(!Auth::guest())
-                        <div class="btn-group"> 
-                            <a class="btn btn-sm btn-outline-secondary" href="/about/{{$boardMember->id}}/edit">Edit</a>
-                            {!!Form::open(['action' => ['BoardMembersController@destroy', $boardMember->id], 'method' => 'POST',])!!}
-                                {{Form::hidden('_method', 'DELETE')}}
-                                {{Form::submit('Delete', ['class' => 'btn btn-danger btn-sm btn-outline-secondary'])}}
-                            {!!Form::close()!!}
-                        </div>
-                    @endif
-                </div>
-            </div> --}}
-        </div>        
+       
+        </div>
+
+        <hr class="about-divider">
+
+        <div class="press text-center">
+            <div class="container text-center">
+                <h1 class="about-title">Press</h1>
+                <p>Press section description.</p>
+            </div>
+
+            <h3><a href="https://www.accessfund.org/news-and-events/news/announcing-the-2016-sharp-end-awards">Eve Tallman wins the Sharp End Award</a></h3>
+            <h3><a href="http://blog.theclymb.com/interviews/interview-with-garrett-mitchell-of-western-colorado-climbers-coalition/">Interview with Garrett Mitchell</a></h3>
+            <h3><a href="https://www.postindependent.com/sports/outdoors/go-play-unaweep-canyon-cliffs-saved-for-climbing/">Post Independent Article about Unaweep Purchase</a></h3>
+            <h3><a href="https://www.accessfund.org/news-and-events/news/western-colorado-climbers-coalition-pays-off-unaweep-canyon-loan">Payoff of Unaweep Canyon Loan</a></h3>
+            <h3><a href="https://www.gjsentinel.com/news/western_colorado/pair-of-unaweep-cliffs-bought-to-preserve-access/article_f123ab5d-eced-51b8-b4b4-28dc7696cdb2.html"
+        </div>
+
     </div>
 
 @endsection
