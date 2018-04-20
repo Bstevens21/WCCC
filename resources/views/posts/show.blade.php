@@ -16,7 +16,7 @@
         <div class="container post-images">
             <div class="row">
                 @foreach(explode(',', $post->post_images) as $image)
-                    <div class="col-md-3">
+                    <div class="col-md-3" oncontextmenu="return false;">
                         <img class="card-img-top post-img img-thumbnail" src="../storage/post_images/{{$image}}" alt="Card image cap">
                     </div>
                     @endforeach

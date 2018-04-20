@@ -8,7 +8,7 @@
 
 <!-- Header with Background Image -->
 
-<header class="wccc-header text-center">
+<header class="wccc-header text-center" oncontextmenu="return false;">
         <div>
         <h1 class="header-text">About us</h1>
         </div>
@@ -53,7 +53,7 @@
         @if(count($boardMembers) > 0)
         @foreach($boardMembers as $boardMember)
         <div class="row board-member">
-            <div class="col-md-2">
+            <div class="col-md-2" oncontextmenu="return false;">
                 <img class="board-image" src="/storage/about_images/{{$boardMember->about_image}}" alt="">
             </div>
             <div class="col-md-10">

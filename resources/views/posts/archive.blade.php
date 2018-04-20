@@ -28,7 +28,7 @@
                         <div class="card-header">
                             <h2><a style="color: black;" href="/posts/{{$post->id}}">{{$post->title}}<a></h2>
                         </div>
-                        <div class="text-center image-box">
+                        <div class="text-center image-box" oncontextmenu="return false;">
                         <img class="post-img img-thumbnail" src="storage/post_images/{{explode(',', $post->post_images)[0]}}" alt="">
                         </div>
                         <div class="card-body">
