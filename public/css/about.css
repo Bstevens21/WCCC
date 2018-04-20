@@ -44,3 +44,13 @@
   .board-member{
     margin: 2rem 0;
   }
+
+  .links{
+    display: inline-block;
+    text-align: left;
+    margin-top: 20px;
+  }
+
+  .links > li{
+    color: lightskyblue;
+  }
