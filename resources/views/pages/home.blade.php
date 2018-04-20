@@ -10,7 +10,7 @@
 
 <title>Western Colorado Climbers Coalition</title>
 
-<div id="demo" class="carousel slide" data-ride="carousel">
+<div id="demo" class="carousel slide" data-ride="carousel" oncontextmenu="return false;">
 
 <!-- The slideshow -->
 <div class="carousel">
