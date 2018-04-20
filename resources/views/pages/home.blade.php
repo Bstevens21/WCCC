@@ -12,41 +12,40 @@
 
 <div id="demo" class="carousel slide" data-ride="carousel">
 
-<!-- Indicators -->
-<ul class="carousel-indicators">
-  <li data-target="#demo" data-slide-to="0" class="active"></li>
-  <li data-target="#demo" data-slide-to="1"></li>
-  <li data-target="#demo" data-slide-to="2"></li>
-  <li data-target="#demo" data-slide-to="3"></li>
-</ul>
-
 <!-- The slideshow -->
 <div class="carousel">
   <div class="carousel-item active">
     <img class="img-fluid" src="img/pic61.jpg" alt="Los Angeles" width="1100" height="500">
-      <div class="container">
-        <div class="carousel-caption">
-          {{-- @if(count($posts) > 0)
+    <div class="container text-center">
+          @if(count($posts) > 0)
           @foreach($posts as $post)
-            <h1>{{$post->title}}</h1>
-            <p >{!!$post->body!!}</p>
-            <a class="btn btn-outline-secondary" href="/posts/{{$post->id}}" role="button">View Post</a>
+          <div class="carousel-caption">
+            <h3>{{$post->title}} <a class="btn btn-outline-secondary" href="/posts/{{$post->id}}" role="button">View Post</a></h3>
+          </div>
           @endforeach  
           @else
             <p>No Posts Found</p>
-          @endif --}}
+          @endif
           <h1 class="carousel-title">Preserving Access to Western Colorado Climbing</h1>
-      </div>
-    </div>
+        </div>
   </div>
   <div class="carousel-item">
     <img src="img/pic11.jpg" class="img-responsive" alt="slide two" >
+    <div class="carousel-caption">
+        <h3>Great day of moving rocks down in Unaweep with the Access Fund</h3>
+    </div>
   </div>
   <div class="carousel-item">
     <img src="img/pic12.jpg" alt="slide three" width="1100" height="500">
+    <div class="carousel-caption">
+        <h3>Desert towers of the Colorado National Monument</h3>
+    </div>
   </div>
   <div class="carousel-item">
     <img src="img/pic3.jpg" alt="slide three" width="1100" height="500">
+    <div class="carousel-caption">
+        <h3>The WCCC team working hard in Unaweep</h3>
+    </div>
   </div>
 </div>
 

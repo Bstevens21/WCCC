@@ -88,11 +88,11 @@
             </div>
             <div class="links">
             <ul>
-            <li><h4><a href="https://www.accessfund.org/news-and-events/news/announcing-the-2016-sharp-end-awards">Eve Tallman wins the Sharp End Award</a></h4></li>
-            <li><h4><a href="http://blog.theclymb.com/interviews/interview-with-garrett-mitchell-of-western-colorado-climbers-coalition/">Interview with Garrett Mitchell</a></h4></li>
-            <li><h4><a href="https://www.postindependent.com/sports/outdoors/go-play-unaweep-canyon-cliffs-saved-for-climbing/">Post Independent Article about Unaweep Purchase</a></h4></li>
-            <li><h4><a href="https://www.accessfund.org/news-and-events/news/western-colorado-climbers-coalition-pays-off-unaweep-canyon-loan">Payoff of Unaweep Canyon Loan</a></h4></li>
-            <li><h4><a href="https://www.gjsentinel.com/news/western_colorado/pair-of-unaweep-cliffs-bought-to-preserve-access/article_f123ab5d-eced-51b8-b4b4-28dc7696cdb2.html">Pair of Unaweep cliffs bought to preserve access<a/><h4></li>
+            <li><h4><a style="color: darkslategrey;" href="https://www.accessfund.org/news-and-events/news/announcing-the-2016-sharp-end-awards">Eve Tallman wins the Sharp End Award</a></h4></li>
+            <li><h4><a style="color: darkslategrey;" href="http://blog.theclymb.com/interviews/interview-with-garrett-mitchell-of-western-colorado-climbers-coalition/">Interview with Garrett Mitchell</a></h4></li>
+            <li><h4><a style="color: darkslategrey;" href="https://www.postindependent.com/sports/outdoors/go-play-unaweep-canyon-cliffs-saved-for-climbing/">Post Independent Article about Unaweep Purchase</a></h4></li>
+            <li><h4><a style="color: darkslategrey;" href="https://www.accessfund.org/news-and-events/news/western-colorado-climbers-coalition-pays-off-unaweep-canyon-loan">Payoff of Unaweep Canyon Loan</a></h4></li>
+            <li><h4><a style="color: darkslategrey;" href="https://www.gjsentinel.com/news/western_colorado/pair-of-unaweep-cliffs-bought-to-preserve-access/article_f123ab5d-eced-51b8-b4b4-28dc7696cdb2.html">Pair of Unaweep cliffs bought to preserve access<a/><h4></li>
             </ul>
             </div>
         </div>
