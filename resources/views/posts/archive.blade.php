@@ -29,7 +29,7 @@
                             <h2><a href="/posts/{{$post->id}}">{{$post->title}}<a></h2>
                         </div>
                         <div class="text center">
-                        <img class="card-img-top post-img img-thumbnail" src="storage/post_images/{{explode(',', $post->post_images)[0]}}" alt="">
+                        <img class="post-img img-thumbnail" src="storage/post_images/{{explode(',', $post->post_images)[0]}}" alt="">
                         </div>
                         <div class="card-body">
                             <p> {!!$post->body!!}</p>
