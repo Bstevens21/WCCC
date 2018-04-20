@@ -24,7 +24,7 @@
             <div class="card-column">
                 @if(count($posts) > 0)
                 @foreach($posts as $post)
-                    <div class="card box-shadow mb-5">
+                    <div class="card box-shadow mb-5 text-center">
                         <div class="card-header">
                             <h2><a href="/posts/{{$post->id}}">{{$post->title}}<a></h2>
                         </div>
@@ -47,13 +47,14 @@
                                 <small class="text-muted">Created on: {{$post->created_at}}</small>
                             </div>
                     </div>
-                </div>
+                
                 
                 @endforeach
                 {{$posts->links()}}
                 @else
                 <p>No Posts Found</p>
             @endif
+        </div>
         </div>
     </div>
     </div>

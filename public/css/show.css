@@ -6,3 +6,23 @@
 show.btn{
     max-width: 300px;
 }
+
+.post-img{
+    height: auto;
+    max-width: 400px;
+}
+
+.post-card{
+    padding: 20px;
+    margin: 40px;
+}
+
+.card-body{
+    margin: 20px;
+    padding: 20px;
+}
+
+.post-images{
+    padding:20px;
+    margin: 20px;
+}
