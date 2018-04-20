@@ -20,15 +20,15 @@
                 </div>
         </section>
        
-        <div class="container-fluid">
+        <div class="post-list">
             <div class="card-column">
                 @if(count($posts) > 0)
                 @foreach($posts as $post)
                     <div class="card box-shadow mb-5 text-center">
                         <div class="card-header">
-                            <h2><a href="/posts/{{$post->id}}">{{$post->title}}<a></h2>
+                            <h2><a style="color: black;" href="/posts/{{$post->id}}">{{$post->title}}<a></h2>
                         </div>
-                        <div class="text center">
+                        <div class="text-center image-box">
                         <img class="post-img img-thumbnail" src="storage/post_images/{{explode(',', $post->post_images)[0]}}" alt="">
                         </div>
                         <div class="card-body">
@@ -49,12 +49,13 @@
                     </div>
                 
                 
-                @endforeach
+                
+        </div>
+        @endforeach
                 {{$posts->links()}}
                 @else
                 <p>No Posts Found</p>
             @endif
-        </div>
         </div>
     </div>
     </div>

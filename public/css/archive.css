@@ -10,6 +10,12 @@
     max-width: 250px;
 }
 
-.images{
-    height: 300px;
+.post-list{
+    padding: 20px;
+    margin: 30px;
+}
+
+.image-box{
+    padding:10px;
+    margin:10px;
 }
