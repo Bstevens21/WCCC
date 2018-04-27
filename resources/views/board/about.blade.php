@@ -45,7 +45,9 @@
     </div>
 
     @if(!Auth::guest())
+    <div class="container text-center">
         <a href="/about/create" class="btn btn-primary my-2">Create</a>
+    </div>
     @endif
 
     <div class="board">

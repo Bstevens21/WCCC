@@ -8,9 +8,7 @@
   }
   .carousel-caption > h3 {
     font-weight: 300;
-  }
-  .post-button{
-    margin: 0px;
+    font-size: 2vw;
   }
   .carousel-item > img {
     min-width: 100%;
